@@ -112,8 +112,7 @@ export function About() {
                     >
                         Oi, meu nome é  Yan Emanuel, tenho 20 anos e estou estudando
                         desenvolvimento Front-End. Comecei a estudar em 2021 através da internet
-                        e rapidamente me interessei pela construção de sites e interfaces. Ainda não tenho
-                        experiência no mercado de trabalho e estou em busca da minha primeira oportunidade.
+                        e rapidamente me interessei pela construção de sites e interfaces. 
                     </p>
                 </Text>
             </Content>
