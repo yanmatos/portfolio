@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 import programImg from '../../assets/images/program.svg';
 
 
-const Container = styled.section`
+const Container = styled.main`
    height: 100vh;
    padding: 100px 60px;
    display: flex;
@@ -150,7 +150,7 @@ h2 {
 
 `
 
-const Social = styled.div`
+const Social = styled.nav`
 display: flex;
 flex-direction: row;
 gap: 10px;
@@ -193,7 +193,6 @@ svg{
     }
 
 `
-
 
 export function Presentation() {
     return (
@@ -249,11 +248,10 @@ export function Presentation() {
                 />
             </Content>
             <ScrollDown>
-                <Link to='about-content' spy={true} smooth={true} offset={-150} duration={500}><svg data-aos="fade-up"
+                <Link to='about-container' spy={true} smooth={true} offset={-70} duration={500}><svg data-aos="fade-up"
                     data-aos-offset="200"
                     data-aos-delay="800" data-aos-once="true" width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.85355 2.14645C3.65829 1.95118 3.34171 1.95118 3.14645 2.14645C2.95118 2.34171 2.95118 2.65829 3.14645 2.85355L7.14645 6.85355C7.34171 7.04882 7.65829 7.04882 7.85355 6.85355L11.8536 2.85355C12.0488 2.65829 12.0488 2.34171 11.8536 2.14645C11.6583 1.95118 11.3417 1.95118 11.1464 2.14645L7.5 5.79289L3.85355 2.14645ZM3.85355 8.14645C3.65829 7.95118 3.34171 7.95118 3.14645 8.14645C2.95118 8.34171 2.95118 8.65829 3.14645 8.85355L7.14645 12.8536C7.34171 13.0488 7.65829 13.0488 7.85355 12.8536L11.8536 8.85355C12.0488 8.65829 12.0488 8.34171 11.8536 8.14645C11.6583 7.95118 11.3417 7.95118 11.1464 8.14645L7.5 11.7929L3.85355 8.14645Z" fillRule="evenodd" clipRule="evenodd"></path></svg></Link>
             </ScrollDown>
         </Container>
     )
-
 }

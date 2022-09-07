@@ -3,17 +3,11 @@ import styled from "styled-components"
 
 
 const Container = styled.section`
-padding: 80px 60px;
-background-color: #FFFFFF;
-
-@media(max-width:724px){
-    padding: 60px 40px;
-}
-`
-const Content = styled.div`
 width: 100%;
 display: flex;
 justify-content: space-between;
+padding: 80px 60px;
+background-color: #FFFFFF;
 
 @media(max-width:1024px){
     flex-direction: column;
@@ -21,7 +15,9 @@ justify-content: space-between;
     justify-content: center;
 }
 
-
+@media(max-width:724px){
+    padding: 60px 40px;
+}
 `
 const Image = styled.div`
 max-width: 500px;
@@ -41,7 +37,6 @@ img {
  height: 100%;
 }
 `
-
 
 const Text = styled.div`
 display: flex;
@@ -66,6 +61,11 @@ h2 {
     font-size: 30px;
     margin-bottom: 15px;
 }
+
+@media(max-width:320px){
+    font-size: 28px;
+    line-height: 1.5rem
+}
 }
 
 p{
@@ -86,37 +86,34 @@ p{
 
 export function Skills() {
     return (
-        <Container >
-            <Content id='skills-content'
+        <Container id='skills-container'>
+            <Text
             >
-                <Text 
-                >
-                    <h2
+                <h2
                     data-aos="fade-up"
                     data-aos-offset="200"
-                    data-aos-delay="100" 
-                    data-aos-once="true" 
-                    >02. HABILIDADES</h2>
-                    <p 
+                    data-aos-delay="100"
+                    data-aos-once="true"
+                >02. HABILIDADES</h2>
+                <p
                     data-aos="fade-up"
                     data-aos-offset="100"
-                    data-aos-delay="200" 
-                    data-aos-once="true" 
-                    >
-                        Tenho conhecimento básico/intermediário de JavaScript, tendo foco na utilização de ReactJs em meus projetos de estudo.
-                        Além disso, tenho um conhecimento básico/intermediário de Html e Css,
-                        sendo que já utilizei Sass e Styled-Components em meus projetos pessoais.
-                    </p>
-                </Text>
-                <Image
+                    data-aos-delay="200"
+                    data-aos-once="true"
+                >
+                    Tenho conhecimento básico/intermediário de JavaScript, tendo foco na utilização de ReactJs em meus projetos de estudo.
+                    Além disso, tenho um conhecimento básico/intermediário de Html e Css,
+                    já tendo utilizado também Sass e Styled-Components em meus projetos pessoais.
+                </p>
+            </Text>
+            <Image
                 data-aos="fade-up"
                 data-aos-offset="200"
-                data-aos-delay="50" 
-                data-aos-once="true" 
-                >
-                    <img src={skillsImg} alt="foto habilidades" />
-                </Image>
-            </Content>
+                data-aos-delay="50"
+                data-aos-once="true"
+            >
+                <img src={skillsImg} alt="foto habilidades" />
+            </Image>
         </Container>
     )
 

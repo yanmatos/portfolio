@@ -5,24 +5,21 @@ import meImg from '../../assets/images/me.jpg'
 const Container = styled.section`
    padding: 80px 60px;
    background-color: #FFFFFF;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
 
-
-@media(max-width:724px){
-    padding: 60px 40px;
-}
-`
-const Content = styled.div`
-width: 100%;
-display: flex;
-justify-content: space-between;
-
-@media(max-width:1024px){
+   @media(max-width:1024px){
     flex-direction: column;
     align-items: center;
     justify-content: center;
+   }
 
-}
+   @media(max-width:724px){
+    padding: 60px 40px;
+    }
 `
+
 const Image = styled.div`
   height: 60vh; 
   
@@ -84,38 +81,34 @@ p{
 
 export function About() {
     return (
-        <Container >
-            <Content
-                id='about-content'
+        <Container id='about-container'>
+            <Image
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-once="true"
             >
-                <Image
+                <img src={meImg} alt="Minha foto" />
+            </Image>
+            <Text
+            >
+                <h2
                     data-aos="fade-up"
                     data-aos-offset="200"
-                    data-aos-delay="50"
+                    data-aos-delay="100"
+                    data-aos-once="true"
+                >01. SOBRE MIM</h2>
+                <p
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-delay="200"
                     data-aos-once="true"
                 >
-                    <img src={meImg} alt="Minha foto" />
-                </Image>
-                <Text
-                >
-                    <h2
-                        data-aos="fade-up"
-                        data-aos-offset="200"
-                        data-aos-delay="100"
-                        data-aos-once="true"
-                    >01. SOBRE MIM</h2>
-                    <p
-                        data-aos="fade-up"
-                        data-aos-offset="200"
-                        data-aos-delay="200"
-                        data-aos-once="true"
-                    >
-                        Oi, meu nome é  Yan Emanuel, tenho 20 anos e estou estudando
-                        desenvolvimento Front-End. Comecei a estudar em 2021 através da internet
-                        e rapidamente me interessei pela construção de sites e interfaces. 
-                    </p>
-                </Text>
-            </Content>
+                    Oi, meu nome é  Yan Emanuel, tenho 20 anos e estou estudando
+                    desenvolvimento Front-End. Comecei a estudar em 2021 através da internet
+                    e rapidamente me interessei pela construção de sites e interfaces.
+                </p>
+            </Text>
         </Container>
     )
 }

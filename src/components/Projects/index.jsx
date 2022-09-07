@@ -35,26 +35,19 @@ font-weight:500;
     }
 `
 
-const Content = styled.div`
-    display: grid;
-    place-items: center center;
-`
 
-const Cards = styled.div`
-
+const Cards = styled.nav`
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 grid-gap: 40px;
-
+place-items: center center;
 
 @media(max-width:1024px){
     grid-gap: 30px;
-
 }
 
 @media(max-width:500px){
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-   
 }
 `
 
@@ -63,26 +56,25 @@ export function Projects() {
     return (
         <Container id='projects-container'>
             <Title
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-once="true"           
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-once="true"
             >03. PROJETOS</Title>
-            <Content
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="100"
-            data-aos-once="true"
+            <Cards
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="100"
+                data-aos-once="true"
             >
-                <Cards>
-                    <Card img={pokemonImg} title='Pokebatalha'
-                        link='https://github.com/yanmatos/pokebatalha' />
-                    <Card img={todoImg} title='To-Do'
-                        link='https://github.com/yanmatos/ToDo' />
-                    <Card img={siteImg} title='Discord 4ano'
-                        link='https://github.com/yanmatos/site4ano' />
-                </Cards>
-            </Content>
+                <Card img={pokemonImg} title='Pokebatalha'
+                    link='https://github.com/yanmatos/pokebatalha' />
+                <Card img={todoImg} title='To-Do'
+                    link='https://github.com/yanmatos/ToDo' />
+                <Card img={siteImg} title='Discord 4ano'
+                    link='https://github.com/yanmatos/site4ano' />
+            </Cards>
+
         </Container>
     )
 }

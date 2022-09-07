@@ -16,6 +16,8 @@ const Container = styled.header`
  padding: 0 60px;
  display: flex;
  align-items: center;
+ justify-content: space-between;
+ width: 100%;
 
  @media(max-width: 724px) {
     padding: 0 40px;
@@ -101,14 +103,7 @@ const Container = styled.header`
 }
 `
 
-const Content = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-`
-
-const Links = styled.div`
+const Links = styled.nav`
 
     display: flex;
     gap: 3.3rem;
@@ -143,22 +138,20 @@ export function Header() {
 
     return (
         <Container >
-            <Content>
-                <img src={yanImg} alt="Logo do Header" />
-                <section className='menu-section' id={menuIsVisible ? 'menu-section-on' : 'menu-section'} >
-                    <div className="menu-toggle" onClick={menuVisibility}>
-                        <div className = 'top'></div>
-                        <div className = 'mid'></div>
-                        <div className = 'bottom'></div>
-                    </div>
-                    <Links id = 'links-container'>
-                        <Link className = 'links' onClick={toContainer} to='home-title' spy={true} smooth={true} offset={-300} duration={0}>Home</Link>
-                        <Link className = 'links' onClick={toContainer} to='about-content' spy={true} smooth={true} offset={-150} duration={0}>Sobre</Link>
-                        <Link className = 'links' onClick={toContainer} to='skills-content' spy={true} smooth={true} offset={-150} duration={0}>Habilidades</Link>
-                        <Link className = 'links' onClick={toContainer} to='projects-container' spy={true} smooth={true} offset={-50} duration={0}>Projetos</Link>
-                    </Links>
-                </section>
-            </Content>
+            <img src={yanImg} alt="Logo do Header" />
+            <div className='menu-section' id={menuIsVisible ? 'menu-section-on' : 'menu-section'} >
+                <div className="menu-toggle" onClick={menuVisibility}>
+                    <div className='top'></div>
+                    <div className='mid'></div>
+                    <div className='bottom'></div>
+                </div>
+                <Links id='links-container'>
+                    <Link className='links' onClick={toContainer} to='home-title' spy={true} smooth={true} offset={-300} duration={0}>Home</Link>
+                    <Link className='links' onClick={toContainer} to='about-container' spy={true} smooth={true} offset={-70} duration={0}>Sobre</Link>
+                    <Link className='links' onClick={toContainer} to='skills-container' spy={true} smooth={true} offset={-150} duration={0}>Habilidades</Link>
+                    <Link className='links' onClick={toContainer} to='projects-container' spy={true} smooth={true} offset={-50} duration={0}>Projetos</Link>
+                </Links>
+            </div>
         </Container>
     )
 }

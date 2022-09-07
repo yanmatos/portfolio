@@ -2,7 +2,7 @@ import styled from "styled-components"
 import logoImg from "../../assets/images/logo192.png"
 
 
-const Container = styled.section`
+const Container = styled.footer`
 
 width: 100%;
 padding: 30px 60px;
